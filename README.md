@@ -217,9 +217,35 @@ Returns the sum of this and the specified Long.
 | addend          | *!Long &#124; number &#124; string* | Addend 
 | **@returns**    | *!Long*         | Sum 
 
-#### Long:and(other)
+#### Long:band(other)
 
 Returns the bitwise AND of this Long and the specified.
+
+| Parameter       | Type            | Description
+|-----------------|-----------------|---------------
+| other           | *!Long &#124; number &#124; string* | Other Long 
+| **@returns**    | *!Long*         | 
+
+#### Long:bnot()
+
+Returns the bitwise NOT of this Long.
+
+| Parameter       | Type            | Description
+|-----------------|-----------------|---------------
+| **@returns**    | *!Long*         | 
+
+#### Long:bor(other)
+
+Returns the bitwise OR of this Long and the specified.
+
+| Parameter       | Type            | Description
+|-----------------|-----------------|---------------
+| other           | *!Long &#124; number &#124; string* | Other Long 
+| **@returns**    | *!Long*         | 
+
+#### Long:bxor/xor(other)
+
+Returns the bitwise XOR of this Long and the given one.
 
 | Parameter       | Type            | Description
 |-----------------|-----------------|---------------
@@ -235,7 +261,7 @@ Compares this Long's value with the specified's.
 | other           | *!Long &#124; number &#124; string* | Other value 
 | **@returns**    | *number*        | 0 if they are the same, 1 if the this is greater and -1 if the given one is greater 
 
-#### Long:divide/div(divisor)
+#### Long:divide/div/__div(divisor)
 
 Returns this Long divided by the specified.
 
@@ -369,7 +395,7 @@ Tests if this Long's value is less than or equal the specified's.
 | other           | *!Long &#124; number &#124; string* | Other value 
 | **@returns**    | *boolean*       | 
 
-#### Long:modulo/mod(divisor)
+#### Long:modulo/mod/__mod(divisor)
 
 Returns this Long modulo the specified.
 
@@ -378,7 +404,7 @@ Returns this Long modulo the specified.
 | divisor         | *!Long &#124; number &#124; string* | Divisor 
 | **@returns**    | *!Long*         | Remainder 
 
-#### Long:multiply/mul(multiplier)
+#### Long:multiply/mul/__mul(multiplier)
 
 Returns the product of this and the specified Long.
 
@@ -387,21 +413,13 @@ Returns the product of this and the specified Long.
 | multiplier      | *!Long &#124; number &#124; string* | Multiplier 
 | **@returns**    | *!Long*         | Product 
 
-#### Long:negate/neg()
+#### Long:negate/neg/__unm()
 
 Negates this Long's value.
 
 | Parameter       | Type            | Description
 |-----------------|-----------------|---------------
 | **@returns**    | *!Long*         | Negated Long 
-
-#### Long:not()
-
-Returns the bitwise NOT of this Long.
-
-| Parameter       | Type            | Description
-|-----------------|-----------------|---------------
-| **@returns**    | *!Long*         | 
 
 #### Long:notEquals/neq(other)
 
@@ -411,15 +429,6 @@ Tests if this Long's value differs from the specified's.
 |-----------------|-----------------|---------------
 | other           | *!Long &#124; number &#124; string* | Other value 
 | **@returns**    | *boolean*       | 
-
-#### Long:or(other)
-
-Returns the bitwise OR of this Long and the specified.
-
-| Parameter       | Type            | Description
-|-----------------|-----------------|---------------
-| other           | *!Long &#124; number &#124; string* | Other Long 
-| **@returns**    | *!Long*         | 
 
 #### Long:shiftLeft/shl(numBits)
 
@@ -448,7 +457,7 @@ Returns this Long with bits logically shifted to the right by the given amount.
 | numBits         | *number &#124; !Long* | Number of bits 
 | **@returns**    | *!Long*         | Shifted Long 
 
-#### Long:subtract/sub(subtrahend)
+#### Long:subtract/sub/__sub(subtrahend)
 
 Returns the difference of this and the specified Long.
 
@@ -498,12 +507,3 @@ Converts this Long to unsigned.
 | Parameter       | Type            | Description
 |-----------------|-----------------|---------------
 | **@returns**    | *!Long*         | Unsigned long 
-
-#### Long:xor(other)
-
-Returns the bitwise XOR of this Long and the given one.
-
-| Parameter       | Type            | Description
-|-----------------|-----------------|---------------
-| other           | *!Long &#124; number &#124; string* | Other Long 
-| **@returns**    | *!Long*         | 

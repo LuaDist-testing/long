@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "long"
-version = "1.0.2-0"
+version = "1.0.3-0"
 -- LuaDist source
 source = {
-  tag = "1.0.2-0",
+  tag = "1.0.3-0",
   url = "git://github.com/LuaDist-testing/long.git"
 }
 -- Original source
 -- source = {
---   url = "https://github.com/BixData/lua-long/archive/1.0.2-0.tar.gz",
---   dir = "lua-long-1.0.2-0"
+--   url = "https://github.com/BixData/lua-long/archive/1.0.3-0.tar.gz",
+--   dir = "lua-long-1.0.3-0"
 -- }
 description = {
   summary = "A pure Lua class representing a 64 bit two's-complement integer value",

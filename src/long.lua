@@ -289,12 +289,43 @@ end
 Long.__add = Long.add
 
 --[[
+ * Returns the bitwise AND of this Long and the specified.
+ * @param {!Long|number|string} other Other Long
+ * @returns {!Long}
+--]]
+function Long:band(other)
+  if not Long.isLong(other) then other = Long.fromValue(other) end
+  return Long.fromBits(bit32.band(self.low, other.low), bit32.band(self.high, other.high), self.unsigned)
+end
+
+--[[
  * Returns the bitwise NOT of this Long.
  * @returns {!Long}
 --]]
 function Long:bnot()
   return Long.fromBits(bit32.bnot(self.low), bit32.bnot(self.high), self.unsigned)
 end
+
+--[[
+ * Returns the bitwise OR of this Long and the specified.
+ * @param {!Long|number|string} other Other Long
+ * @returns {!Long}
+--]]
+function Long:bor(other)
+  if not Long.isLong(other) then other = Long.fromValue(other) end
+  return Long.fromBits(bit32.bor(self.low, other.low), bit32.bor(self.high, other.high), self.unsigned)
+end
+
+--[[
+ * Returns the bitwise XOR of this Long and the given one.
+ * @param {!Long|number|string} other Other Long
+ * @returns {!Long}
+--]]
+function Long:bxor(other)
+  if not Long.isLong(other) then other = Long.fromValue(other) end
+  return Long.fromBits(bit32.bxor(self.low, other.low), bit32.bxor(self.high, other.high), self.unsigned)
+end
+Long.xor = Long.bxor
 
 --[[
  * Compares this Long's value with the specified's.
